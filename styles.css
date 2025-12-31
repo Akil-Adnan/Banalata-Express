@@ -1,0 +1,319 @@
+/* =========================================================
+   CINEMATIC NOIR THEME — CLAMP + REM SYSTEM
+   ========================================================= */
+
+/* -----------------------------
+   1. FONT & FILE IMPORTS
+-------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Atma:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Noto+Sans+Bengali:wght@100..900&display=swap');
+
+@import url('css/header.css');
+@import url('css/home.css');
+@import url('css/trailer.css');
+@import url('css/about.css');
+
+/* -----------------------------
+   2. ROOT SETTINGS
+-------------------------------- */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 100%; /* 1rem = 16px */
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    height: max(50rem, 100vh, 100dvh);
+} 
+
+.container {
+    width: min(1200px, 90vw);
+    height: 100%;
+    margin: 0 auto;
+    padding-top: calc(var(--nav-height) + 2rem);
+}
+
+
+@media screen and (max-width: 768px) {
+    html {
+        scroll-snap-type: unset;
+        scroll-padding-top: var(--nav-height);
+    }
+    section {
+        min-height: 100vh;
+        height: auto;
+        scroll-snap-align: unset;
+        scroll-snap-stop: unset;
+    }
+
+    .container {
+        padding: var(--space-5) var(--space-3);
+    }
+
+}
+
+
+
+
+/* -----------------------------
+   3. CSS VARIABLES
+-------------------------------- */
+:root {
+  /* Core Colors */
+  --color-black: #0b0d10;
+  --color-charcoal: #141923;
+  --color-grain-gray: #2a2f3a;
+  --color-ash-white: #e6e6e6;
+
+  /* Accents */
+  --color-yellow: #f2c94c;
+  --color-red: #c4161c;
+  --color-crimson: #8e0f14;
+
+  /* Muted */
+  --color-smoke: #9fa4ae;
+  --color-dusty-blue: #3a4256;
+  --color-sepia: #5a4634;
+
+  /* Fonts */
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-bengali-display: 'Atma', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-bengali: 'Noto Sans Bengali', sans-serif;
+
+  /* --------------------------------
+     Fluid Typography (clamp)
+     -------------------------------- */
+
+  --fs-h1: clamp(3rem, 5vw, 4rem);     /* 48 → 64 */
+  --fs-h2: clamp(2.5rem, 4vw, 3rem);   /* 40 → 48 */
+  --fs-h3: clamp(2rem, 3vw, 2.25rem);  /* 32 → 36 */
+  --fs-h4: clamp(1.5rem, 2.5vw, 1.75rem);
+  --fs-h5: clamp(1.2rem, 2.0vw, 1.5rem);
+
+  --fs-body-lg: clamp(1.0625rem, 1.2vw, 1.125rem); /* 17 → 18 */
+  --fs-body: clamp(1rem, 1.1vw, 1.0625rem);        /* 16 → 17 */
+  --fs-small: 0.875rem;
+  --fs-caption: 0.75rem;
+
+  /* --------------------------------
+     Spacing Scale (rem + clamp)
+     -------------------------------- */
+
+  --space-1: clamp(0.5rem, 0.8vw, 0.75rem);
+  --space-2: clamp(1rem, 1.2vw, 1.5rem);
+  --space-3: clamp(1.5rem, 2vw, 2rem);
+  --space-4: clamp(2rem, 3vw, 2.5rem);
+  --space-5: clamp(3rem, 4vw, 4rem);
+  --space-6: clamp(4rem, 6vw, 6rem);
+  --space-7: clamp(6rem, 8vw, 8rem);
+
+  /* UI */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-medium: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Shadows */
+  --shadow-soft: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.35);
+  --shadow-hover: 0 0.9375rem 2.5rem rgba(0, 0, 0, 0.55);
+
+  /* Different Measurements */
+  --nav-height: 4.5rem;
+}
+
+/* -----------------------------
+   4. RESET & BASE
+-------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-black);
+  color: var(--color-ash-white);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  height: 100vh;
+}
+
+li, ul {
+    padding: 0;
+    list-style: none;
+}
+
+/* -----------------------------
+   5. TYPOGRAPHY
+-------------------------------- */
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-2);
+  margin-block: 0;
+}
+
+h1 { font-size: var(--fs-h1); line-height: 1.1; }
+h2 { font-size: var(--fs-h2); line-height: 1.15; }
+h3 { font-size: var(--fs-h3); line-height: 1.2; }
+
+h4 {
+  font-family: var(--font-bengali);
+  font-size: var(--fs-h4);
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: var(--space-2);
+}
+
+.small-text { font-size: var(--fs-small); color: var(--color-smoke); }
+.caption { font-size: var(--fs-caption); color: var(--color-smoke); }
+
+.bn {
+  font-family: var(--font-bengali);
+  line-height: 1.6;
+}
+
+/* -----------------------------
+   6. LINKS
+-------------------------------- */
+a {
+  color: var(--color-yellow);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  transition: all 0.3 ease-in-out;
+}
+
+a:hover {
+  color: var(--color-ash-white);
+}
+
+/* -----------------------------
+   7. BUTTONS
+-------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(0.625rem, 1vw, 0.75rem)
+           clamp(1.5rem, 2vw, 1.75rem);
+  font-size: var(--fs-body);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-primary {
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 0.75rem rgba(242, 201, 76, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-yellow);
+  border: 0.0625rem solid var(--color-yellow);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(242, 201, 76, 0.1);
+}
+
+/* -----------------------------
+   8. CARDS
+-------------------------------- */
+.card {
+  background-color: var(--color-charcoal);
+  border: 0.0625rem solid var(--color-grain-gray);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  transition: transform var(--transition-medium),
+              box-shadow var(--transition-medium);
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-hover);
+}
+
+
+/* -----------------------------
+   10. SECTIONS
+-------------------------------- */
+.section {
+  padding: var(--space-6) var(--space-4);
+}
+
+.section-dark {
+  background: linear-gradient(
+    180deg,
+    var(--color-black) 0%,
+    var(--color-charcoal) 100%
+  );
+}
+
+/* -----------------------------
+   11. IMAGES
+-------------------------------- */
+/* img {
+  max-width: 100%;
+  display: block;
+} */
+
+.poster {
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  filter: contrast(1.1) saturate(0.85);
+}
+
+/* -----------------------------
+   12. FORMS
+-------------------------------- */
+input,
+textarea,
+select {
+  background-color: var(--color-charcoal);
+  border: 0.0625rem solid var(--color-grain-gray);
+  color: var(--color-ash-white);
+  padding: clamp(0.625rem, 1vw, 0.75rem);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-yellow);
+}
+
+/* -----------------------------
+   13. UTILITIES
+-------------------------------- */
+.text-yellow { color: var(--color-yellow); }
+.text-red { color: var(--color-red); }
+.text-muted { color: var(--color-smoke); }
+
+.bg-charcoal { background-color: var(--color-charcoal); }
+.bg-black { background-color: var(--color-black); }
+
+.mt-4 { margin-top: var(--space-4); }
+.mb-4 { margin-bottom: var(--space-4); }

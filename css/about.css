@@ -1,0 +1,160 @@
+#about {
+    background-image: url('../assets/background-1.png');
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+}
+
+.about__grid {
+    width: 100%;
+    height: calc(100% - 6rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about__poster, .about__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: var(--space-5); 
+}
+
+.about__poster {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+
+.about__image {
+    height: auto;
+    max-height: 560px;
+    max-width: 480px;
+    object-fit: contain;
+}
+
+
+.about__release {
+    margin: 0;
+}
+
+.about__name {
+    margin-bottom: -5px;
+    font-family: var(--font-bengali);
+    margin-top: 0;
+}
+
+.about__button {
+    position: relative;
+    align-self: flex-start;
+    background-color: transparent;
+    padding: 0.8rem 2rem;
+    border: 1px solid var(--color-ash-white);
+    color: var(--color-ash-white);
+    font-size: var(--fs-text-lg);
+    font-weight: 600;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color 0.4s ease-in-out;
+}
+
+/* Overlay pseudo-element */
+.about__button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-ash-white);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 0;
+}
+
+/* Text above overlay */
+.about__button span {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    transition: color 0.4s ease-in-out;
+}
+
+/* Hover effect */
+.about__button:hover::before,
+.about__button:active::before {
+    transform: translateX(0);
+}
+
+.about__button:hover span,
+.about__button:active span {
+    color: var(--color-charcoal);
+}
+
+
+@media screen and (max-width: 768px) {
+    .about__grid {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .about__poster img {
+        width: min(300px, 60vw);
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+
+
+
+/* Modal Context */
+.modal { 
+    position: fixed; 
+    inset: 0; 
+    z-index: 3000; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.hidden { 
+    display: none; 
+}
+
+.modal__overlay { 
+    position: absolute; 
+    inset: 0; 
+    background: rgba(0,0,0,0.75); 
+    backdrop-filter: blur(4px);
+
+}
+.modal__content { 
+    width: 95vw; 
+    aspect-ratio: 16 / 10;
+    max-width: 1200px; 
+    max-height: 675px; 
+    background: #000; 
+    border-radius: 12px; 
+    overflow: hidden; 
+    position: relative; 
+    z-index: 1; 
+}
+
+.modal__close { 
+    position: absolute; 
+    top: 0.5rem; 
+    left: 0.75rem; 
+    z-index: 2; 
+    font-size: 1.75rem; 
+    color: var(--color-smoke); 
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+}
+
+.modal__content iframe { 
+    width: 100%; 
+    height: 100%; 
+}

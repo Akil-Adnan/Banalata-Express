@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="assets/logo.png" type="image/png" />
+    <title>Banalata Express</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav__logo">
+          <a href="#home"
+            ><img src="assets/logo.png" alt="Buriganga Talkies Logo"
+          /></a>
+        </div>
+        <ul class="nav__links">
+          <li><a class="nav__link active" href="#home">Home</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#trailer">Trailer</a></li>
+          <li><a class="nav__link" href="#cast">Cast</a></li>
+          <li><a class="nav__link" href="#gallery">Gallery</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+      <aside class="sidebar hide">
+        <div class="cross">
+          <i class="fa-solid fa-xmark close"></i>
+        </div>
+        <ul class="aside__links">
+          <li class="aside__link active"><a href="#home">Home</a></li>
+          <li class="aside__link"><a href="#about">About</a></li>
+          <li class="aside__link"><a href="#trailer">Trailer</a></li>
+          <li class="aside__link"><a href="#cast">Cast</a></li>
+          <li class="aside__link"><a href="#gallery">Gallery</a></li>
+          <li class="aside__link"><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="aside__social-links">
+          <a href="https://www.facebook.com/p/Buriganga-Talkies-61582315140804/"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </aside>
+    </header>
+    <main>
+      <section id="home">
+        <h3 class="movie-inspiration">হুমায়ূন আহমেদের "কিছুক্ষণ" অবলম্বনে</h3>
+        <img class="movie-name" src="assets/name.png" alt="Banalata Express" />
+        <div class="home__footer">
+          <div class="home__social-links">
+            <a
+              href="https://www.facebook.com/p/Buriganga-Talkies-61582315140804/"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+          </div>
+          <p class="scroll-text">
+            <i class="fa-solid fa-circle-arrow-down"></i>
+            SCROLL TO LEARN MORE
+          </p>
+        </div>
+
+        <video class="hero-video__bg" autoplay muted loop playsinline>
+          <source src="assets/Trailer - Home.mp4" type="video/mp4" />
+        </video>
+      </section>
+      <section id="about">
+        <div class="container">
+          <h2>Overview</h2>
+          <div class="about__grid">
+            <div class="about__poster">
+              <img
+                class="about__image"
+                src="assets/cover.jpg"
+                alt="Poster photo"
+              />
+            </div>
+            <div class="about__content">
+              <h2 class="about__name">বনলতা এক্সপ্রেস</h2>
+              <p class="about__release">2026 | Comedy, Drama</p>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Consectetur quos repudiandae nemo nisi sed earum quas ut quae
+                molestias nihil provident id ipsum, assumenda officia
+                reiciendis, sequi reprehenderit impedit odit? Tempore, incidunt
+                tempora rem alias modi sint dolore ad accusamus quisquam cumque
+                nostrum repellat rerum, numquam praesentium, libero sit pariatur
+                voluptatum. Deleniti corrupti molestiae unde ab fugiat placeat
+                non consectetur. Quas qui suscipit quibusdam. Incidunt amet
+                odit, exercitationem ipsa consequatur fugiat, ratione eaque
+                earum quae maxime deserunt excepturi doloribus labore. Ab
+                reprehenderit tempore quidem aliquam error repudiandae nam eum!
+                Voluptate!
+              </p>
+              <button class="about__button"><span>Watch Trailer</span></button>
+
+              <div class="modal hidden" id="videoModal">
+                <div class="modal__overlay"></div>
+                <div class="modal__content">
+                  <button class="modal__close" id="closeModal">✕</button>
+                  <iframe
+                    id="ytPlayer"
+                    src=""
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowfullscreen
+                  >
+                  </iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
