@@ -96,13 +96,32 @@ carouselSlides.forEach((slide, i) => {
   if (i === 0) div.classList.add("active");
 
   const img = document.createElement("img");
-  img.src = slide.src;
   img.alt = slide.alt;
   img.classList.add("d-block", "w-100");
+
+  // Lazy load
+  if (i === 0) {
+    // First slide loads immediately
+    img.src = slide.src;
+  } else {
+    // Other slides: use data-src and let carousel JS load when shown
+    img.dataset.src = slide.src;
+    img.loading = "lazy"; // optional, modern browsers
+  }
 
   div.appendChild(img);
   innerEl.appendChild(div);
 });
+
+// Optional: Preload images on slide show
+const carouselEl = document.getElementById("carouselExampleIndicators");
+carouselEl.addEventListener("slide.bs.carousel", (e) => {
+  const nextImg = e.relatedTarget.querySelector("img");
+  if (nextImg && nextImg.dataset.src && !nextImg.src) {
+    nextImg.src = nextImg.dataset.src;
+  }
+});
+
 
 /* ---------- Contact Information ---------- */
 const contactEl = document.getElementById("contactInfo");
@@ -279,3 +298,4 @@ backgroundImages.forEach(bg => {
     section.style.backgroundImage = `url('${bg.url}')`;
   }
 });
+
