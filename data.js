@@ -51,23 +51,23 @@ export const castData = [
 // Carousel Image Data
 export const carouselSlides = [
   {
-    src: "https://scontent.fdac151-1.fna.fbcdn.net/v/t39.30808-6/592862549_122110004535077171_6663321955648925262_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=fp-4-gcMegsQ7kNvwFzat4D&_nc_oc=AdnB25QVTr27CTXQZE1_rR_6zbk6JX2iTPAn-HFdgzpFCAhnzaRA2p3i0pHj_xk_kPA&_nc_zt=23&_nc_ht=scontent.fdac151-1.fna&_nc_gid=GyZS_R3m4wY0PC0vtpHKFw&oh=00_AfqpjFcnsWVlS029k2sMyNakN_a2MLHEsYtW6fiHVhJEWA&oe=695BFBC5",
+    src: "https://images.unsplash.com/photo-1580757468214-c73f7062a5cb?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Mountain Landscape"
   },
   {
-    src: "https://scontent.fdac151-1.fna.fbcdn.net/v/t39.30808-6/593765751_122110004391077171_7137512250546616689_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=u21s268edpQQ7kNvwFcTVlq&_nc_oc=Adm-lNv4giVdoQ_DonlInAV450osquxwvMrYf8GHfo1w1iT6vKvXNit_XSNU5AMluZE&_nc_zt=23&_nc_ht=scontent.fdac151-1.fna&_nc_gid=4PuDGtgRyQ3E2VlHiHb96Q",
+    src: "https://images.unsplash.com/photo-1603486002664-a7319421e133?q=80&w=1842&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Beach Sunset"
   },
   {
-    src: "https://scontent.fdac151-1.fna.fbcdn.net/v/t39.30808-6/592059097_122110004463077171_4870142053065016972_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=CCOEPUpbLMIQ7kNvwGMlpFI&_nc_oc=AdnQALxCzHB1sIh_gtm-Bo8vGDpXOJjxWU8If3GkF6s8XKETRHh7LFN4X7_1mKpU7HU&_nc_zt=23&_nc_ht=scontent.fdac151-1.fna&_nc_gid=Ysj88LRZ1Omf_B0iYcpA9Q",
+    src: "https://images.unsplash.com/photo-1594568284297-7c64464062b1?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Beach Sunset"
   },
   {
-    src: "https://scontent.fdac151-1.fna.fbcdn.net/v/t39.30808-6/581934318_122106680505077171_8102046010505362098_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=uK_DXFE5KPcQ7kNvwFoY2sJ&_nc_oc=AdlmcST9dhXPfRvjy2fotNTB5NNe075Fa8CFbi8wLxWXshOgBnlv8a2rSxfc_maLo04&_nc_zt=23&_nc_ht=scontent.fdac151-1.fna&_nc_gid=hD79Zygp0Y3iRZXrj1BOdA",
+    src: "https://images.unsplash.com/photo-1595835018349-198460e1d309?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Beach Sunset"
   },
   {
-    src: "assets/cover.jpg",
+    src: "https://images.unsplash.com/photo-1599154456742-c82164d2dfb0?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Cover Image"
   }
 ];
@@ -104,3 +104,4 @@ export const backgroundImages = [
     }
 
 ]
+
