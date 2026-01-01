@@ -96,10 +96,11 @@ export const youTubeLink = "https://www.youtube.com/embed/PE1k3TdwK7Y";
 export const backgroundImages = [
     {
         id: "about",
-        url: "../assets/about-background.png"
+        url: "assets/about-background.png"
     },
     {
         id: "cast",
-        url: '../assets/cast-background.jpg'
+        url: 'assets/cast-background.jpg'
     }
+
 ]
