@@ -1,0 +1,24 @@
+#gallery {
+    height: auto;
+    min-height: 60vh;
+    padding-bottom: 10rem;
+}
+
+@media screen and (max-width: 768px) {
+    #gallery {
+        min-height: auto;
+    }
+}
+
+
+
+#carouselContainer {
+      max-width: 100%; /* Fixed width of the carousel */
+      margin: 20px auto; /* Center the carousel */
+    }
+    .carousel-inner img {
+      width: 100%;
+      aspect-ratio: 16 / 9; /* Fixed height */
+      object-fit: cover; /* Cover the frame without distortion */
+      border-radius: 1rem;
+    }

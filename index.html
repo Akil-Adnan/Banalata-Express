@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -11,78 +10,68 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <link rel="icon" href="assets/logo.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Banalata Express</title>
   </head>
   <body>
     <header>
+      <!-- Navigation Bar -->
       <nav>
+        <!-- Logo -->
         <div class="nav__logo">
           <a href="#home"
             ><img src="assets/logo.png" alt="Buriganga Talkies Logo"
           /></a>
         </div>
-        <ul class="nav__links">
-          <li><a class="nav__link active" href="#home">Home</a></li>
-          <li><a class="nav__link" href="#about">About</a></li>
-          <li><a class="nav__link" href="#trailer">Trailer</a></li>
-          <li><a class="nav__link" href="#cast">Cast</a></li>
-          <li><a class="nav__link" href="#gallery">Gallery</a></li>
-          <li><a class="nav__link" href="#contact">Contact</a></li>
-        </ul>
+        <!-- In-page Link -->
+        <ul class="nav__links" id="navLinks"></ul>
         <div class="hamburger">
           <i class="fa-solid fa-bars"></i>
         </div>
       </nav>
+      <!-- Aside Overlay -->
+      <div class="aside__overlay hidden"></div>
+      <!-- Aside Bar -->
       <aside class="sidebar hide">
+        <!-- Close Button -->
         <div class="cross">
           <i class="fa-solid fa-xmark close"></i>
         </div>
-        <ul class="aside__links">
-          <li class="aside__link active"><a href="#home">Home</a></li>
-          <li class="aside__link"><a href="#about">About</a></li>
-          <li class="aside__link"><a href="#trailer">Trailer</a></li>
-          <li class="aside__link"><a href="#cast">Cast</a></li>
-          <li class="aside__link"><a href="#gallery">Gallery</a></li>
-          <li class="aside__link"><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="aside__social-links">
-          <a href="https://www.facebook.com/p/Buriganga-Talkies-61582315140804/"
-            ><i class="fa-brands fa-facebook"></i
-          ></a>
-          <a href=""><i class="fa-brands fa-instagram"></i></a>
-          <a href=""><i class="fa-brands fa-youtube"></i></a>
-        </div>
+        <!-- In-page Link -->
+        <ul class="aside__links" id="asideLinks"></ul>
+        <!-- Aside Social Links -->
+        <div class="aside__social-links" id="asideSocialLinks"></div>
       </aside>
     </header>
     <main>
-      <section id="home">
+      <section id="home" class="flex-center-c">
+        <!-- Movie Inspiration Name -->
         <h3 class="movie-inspiration">হুমায়ূন আহমেদের "কিছুক্ষণ" অবলম্বনে</h3>
+        <!-- Movie Title -->
         <img class="movie-name" src="assets/name.png" alt="Banalata Express" />
         <div class="home__footer">
-          <div class="home__social-links">
-            <a
-              href="https://www.facebook.com/p/Buriganga-Talkies-61582315140804/"
-              ><i class="fa-brands fa-facebook"></i
-            ></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-            <a href=""><i class="fa-brands fa-youtube"></i></a>
-          </div>
-          <p class="scroll-text">
+          <!-- Home Social Links -->
+          <div
+            class="home__social-links flex-center-r"
+            id="homeSocialLinks"
+          ></div>
+          <p class="scroll-text flex-center-r">
             <i class="fa-solid fa-circle-arrow-down"></i>
             SCROLL TO LEARN MORE
           </p>
         </div>
 
-        <video class="hero-video__bg" autoplay muted loop playsinline>
-          <source src="assets/Trailer - Home.mp4" type="video/mp4" />
+        <video class="hero-video__bg bg-video" autoplay muted loop playsinline>
+          <source src="assets/background.mp4" type="video/mp4" />
         </video>
       </section>
-      <section id="about">
+      <section id="about" class="background">
         <div class="container">
           <h2>Overview</h2>
           <div class="about__grid">
-            <div class="about__poster">
+            <div class="about__poster flex-center-r">
               <img
                 class="about__image"
                 src="assets/cover.jpg"
@@ -106,7 +95,9 @@
                 reprehenderit tempore quidem aliquam error repudiandae nam eum!
                 Voluptate!
               </p>
-              <button class="about__button"><span>Watch Trailer</span></button>
+              <button class="display__button">
+                <span>Watch Trailer</span>
+              </button>
 
               <div class="modal hidden" id="videoModal">
                 <div class="modal__overlay"></div>
@@ -127,7 +118,81 @@
           </div>
         </div>
       </section>
+      <section id="cast" class="hide-scrollbar background">
+        <div class="container">
+          <div class="cast__grid">
+            <div class="cast__grid-left">
+              <h2>Cast</h2>
+              <!-- <p>Featuring</p>
+              <p style="padding-left: 1rem">John Doe</p>
+              <p style="padding-left: 1rem">John Doe</p>
+              <p style="padding-left: 1rem">John Doe</p>
+              <p style="padding-left: 1rem">John Doe</p>
+              <p style="padding-left: 1rem">John Doe</p> -->
+            </div>
+            <div class="cast__grid-right" id="castGrid"></div>
+          </div>
+        </div>
+      </section>
+      <section id="gallery">
+        <div class="container">
+          <h2>Gallery</h2>
+          <div id="carouselContainer">
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              data-bs-ride="carousel"
+              data-bs-interval="3000"
+            >
+              <div class="carousel-indicators" id="carouselIndicators"></div>
+              <div class="carousel-inner" id="carouselInner">
+                <!-- Controls -->
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <script src="script.js"></script>
+    <section id="contact">
+      <div class="container">
+        <div class="contact__grid">
+          <div class="contact__grid-left">
+            <img src="assets/logo.png" alt="Buriganga Talkies" />
+            <p>
+              A home for bold Bangladeshi storytellers; crafting films that blur
+              the line between art and commerce — intimate, uncompromising,
+              unforgettable.
+            </p>
+            <!-- Contact Info -->
+            <div class="contact__info" id="contactInfo"></div>
+          </div>
+          <div class="contact__grid-right"></div>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

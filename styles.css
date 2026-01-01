@@ -9,8 +9,11 @@
 
 @import url('css/header.css');
 @import url('css/home.css');
-@import url('css/trailer.css');
 @import url('css/about.css');
+@import url('css/cast.css');
+@import url('css/gallery.css');
+@import url('css/footer.css');
+@import url('css/carousel.css');
 
 /* -----------------------------
    2. ROOT SETTINGS
@@ -37,6 +40,20 @@ section {
     margin: 0 auto;
     padding-top: calc(var(--nav-height) + 2rem);
 }
+
+.background {
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+}
+
+.flex-center-c, .flex-center-r {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-center-c { flex-direction: column;}
 
 
 @media screen and (max-width: 768px) {
@@ -152,6 +169,7 @@ body {
 li, ul {
     padding: 0;
     list-style: none;
+    margin: 0;
 }
 
 /* -----------------------------
@@ -192,101 +210,13 @@ p {
    6. LINKS
 -------------------------------- */
 a {
-  color: var(--color-yellow);
   text-decoration: none;
-  transition: color var(--transition-fast);
   transition: all 0.3 ease-in-out;
 }
 
-a:hover {
-  color: var(--color-ash-white);
-}
 
 /* -----------------------------
-   7. BUTTONS
--------------------------------- */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: clamp(0.625rem, 1vw, 0.75rem)
-           clamp(1.5rem, 2vw, 1.75rem);
-  font-size: var(--fs-body);
-  font-weight: 600;
-  border-radius: var(--radius-sm);
-  border: none;
-  cursor: pointer;
-  transition: all var(--transition-fast);
-}
-
-.btn-primary {
-  background-color: var(--color-yellow);
-  color: var(--color-black);
-}
-
-.btn-primary:hover {
-  box-shadow: 0 0 0.75rem rgba(242, 201, 76, 0.4);
-}
-
-.btn-secondary {
-  background: transparent;
-  color: var(--color-yellow);
-  border: 0.0625rem solid var(--color-yellow);
-}
-
-.btn-secondary:hover {
-  background-color: rgba(242, 201, 76, 0.1);
-}
-
-/* -----------------------------
-   8. CARDS
--------------------------------- */
-.card {
-  background-color: var(--color-charcoal);
-  border: 0.0625rem solid var(--color-grain-gray);
-  border-radius: var(--radius-md);
-  padding: var(--space-3);
-  transition: transform var(--transition-medium),
-              box-shadow var(--transition-medium);
-}
-
-.card:hover {
-  transform: scale(1.02);
-  box-shadow: var(--shadow-hover);
-}
-
-
-/* -----------------------------
-   10. SECTIONS
--------------------------------- */
-.section {
-  padding: var(--space-6) var(--space-4);
-}
-
-.section-dark {
-  background: linear-gradient(
-    180deg,
-    var(--color-black) 0%,
-    var(--color-charcoal) 100%
-  );
-}
-
-/* -----------------------------
-   11. IMAGES
--------------------------------- */
-/* img {
-  max-width: 100%;
-  display: block;
-} */
-
-.poster {
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
-  filter: contrast(1.1) saturate(0.85);
-}
-
-/* -----------------------------
-   12. FORMS
+   7. FORMS
 -------------------------------- */
 input,
 textarea,
@@ -305,15 +235,50 @@ textarea:focus {
   border-color: var(--color-yellow);
 }
 
-/* -----------------------------
-   13. UTILITIES
--------------------------------- */
-.text-yellow { color: var(--color-yellow); }
-.text-red { color: var(--color-red); }
-.text-muted { color: var(--color-smoke); }
 
-.bg-charcoal { background-color: var(--color-charcoal); }
-.bg-black { background-color: var(--color-black); }
+.display__button {
+    position: relative;
+    align-self: flex-start;
+    background-color: transparent;
+    padding: 0.8rem 2rem;
+    border: 1px solid var(--color-ash-white);
+    color: var(--color-ash-white);
+    font-size: var(--fs-text-lg);
+    font-weight: 600;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color 0.4s ease-in-out;
+}
 
-.mt-4 { margin-top: var(--space-4); }
-.mb-4 { margin-bottom: var(--space-4); }
+/* Overlay pseudo-element */
+.display__button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-ash-white);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 0;
+}
+
+/* Text above overlay */
+.display__button span {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    transition: color 0.4s ease-in-out;
+}
+
+/* Hover effect */
+.display__button:hover::before,
+.display__button:active::before {
+    transform: translateX(0);
+}
+
+.display__button:hover span,
+.display__button:active span {
+    color: var(--color-charcoal);
+}
