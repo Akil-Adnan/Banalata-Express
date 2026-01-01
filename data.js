@@ -27,23 +27,23 @@ export const socialLinksData = [
 export const castData = [
   {
     name: "Mosharraf Karim",
-    img: "https://outspoken.newagebd.com/files/img/202409/c85d710f9345886c6a57c1bb42fc52d6.jpg"
+    img: "https://images.pexels.com/photos/4792285/pexels-photo-4792285.jpeg"
   },
   {
     name: "Chanchal Chowdhury",
-    img: "https://assets.telegraphindia.com/telegraph/2022/Dec/1670612919_chanchal.jpg"
+    img: "https://images.pexels.com/photos/4792288/pexels-photo-4792288.jpeg"
   },
   {
     name: "Azmeri Haque Badhon",
-    img: "https://www.desiblitz.com/wp-content/uploads/2025/07/Azmeri-Haque-Badhon-says-Industry-Friends-turned-Against-Her-f.jpg"
+    img: "https://images.pexels.com/photos/8382083/pexels-photo-8382083.jpeg"
   },
   {
     name: "Sabila Nur",
-    img: "https://www.thedailystar.net/sites/default/files/styles/big_201/public/images/2023/04/01/smm_6605.jpg"
+    img: "https://images.pexels.com/photos/5999874/pexels-photo-5999874.jpeg"
   },
   {
     name: "Shamol Mawla",
-    img: "https://d2u0ktu8omkpf6.cloudfront.net/e4ab8fa4e84dd538b39b486f3987a5bf500df8b6d5995e28.jpg"
+    img: "https://images.pexels.com/photos/7103117/pexels-photo-7103117.jpeg"
   }
 ];
 
@@ -51,23 +51,23 @@ export const castData = [
 // Carousel Image Data
 export const carouselSlides = [
   {
-    src: "https://scontent.fdac151-1.fna.fbcdn.net/v/t39.30808-6/592862549_122110004535077171_6663321955648925262_n.jpg?stp=dst-jpg_s590x590_tt6&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=fp-4-gcMegsQ7kNvwFzat4D&_nc_oc=AdnB25QVTr27CTXQZE1_rR_6zbk6JX2iTPAn-HFdgzpFCAhnzaRA2p3i0pHj_xk_kPA&_nc_zt=23&_nc_ht=scontent.fdac151-1.fna&_nc_gid=GyZS_R3m4wY0PC0vtpHKFw&oh=00_AfqpjFcnsWVlS029k2sMyNakN_a2MLHEsYtW6fiHVhJEWA&oe=695BFBC5",
+    src: "https://images.pexels.com/photos/4792285/pexels-photo-4792285.jpeg",
     alt: "Mountain Landscape"
   },
   {
-    src: "https://scontent.fdac151-1.fna.fbcdn.net/v/t39.30808-6/593765751_122110004391077171_7137512250546616689_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=u21s268edpQQ7kNvwFcTVlq&_nc_oc=Adm-lNv4giVdoQ_DonlInAV450osquxwvMrYf8GHfo1w1iT6vKvXNit_XSNU5AMluZE&_nc_zt=23&_nc_ht=scontent.fdac151-1.fna&_nc_gid=4PuDGtgRyQ3E2VlHiHb96Q",
+    src: "https://images.pexels.com/photos/4792288/pexels-photo-4792288.jpeg",
     alt: "Beach Sunset"
   },
   {
-    src: "https://scontent.fdac151-1.fna.fbcdn.net/v/t39.30808-6/592059097_122110004463077171_4870142053065016972_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=CCOEPUpbLMIQ7kNvwGMlpFI&_nc_oc=AdnQALxCzHB1sIh_gtm-Bo8vGDpXOJjxWU8If3GkF6s8XKETRHh7LFN4X7_1mKpU7HU&_nc_zt=23&_nc_ht=scontent.fdac151-1.fna&_nc_gid=Ysj88LRZ1Omf_B0iYcpA9Q",
+    src: "https://images.pexels.com/photos/8382083/pexels-photo-8382083.jpeg",
     alt: "Beach Sunset"
   },
   {
-    src: "https://scontent.fdac151-1.fna.fbcdn.net/v/t39.30808-6/581934318_122106680505077171_8102046010505362098_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=uK_DXFE5KPcQ7kNvwFoY2sJ&_nc_oc=AdlmcST9dhXPfRvjy2fotNTB5NNe075Fa8CFbi8wLxWXshOgBnlv8a2rSxfc_maLo04&_nc_zt=23&_nc_ht=scontent.fdac151-1.fna&_nc_gid=hD79Zygp0Y3iRZXrj1BOdA",
+    src: "https://images.pexels.com/photos/5999874/pexels-photo-5999874.jpeg",
     alt: "Beach Sunset"
   },
   {
-    src: "assets/cover.jpg",
+    src: "https://images.pexels.com/photos/7103117/pexels-photo-7103117.jpeg",
     alt: "Cover Image"
   }
 ];
@@ -102,4 +102,5 @@ export const backgroundImages = [
         id: "cast",
         url: 'assets/cast-background.webp'
     }
+
 ]
